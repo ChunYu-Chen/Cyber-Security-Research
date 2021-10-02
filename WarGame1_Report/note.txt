@@ -1,0 +1,16 @@
+length: 7
+Key:
+5385876380 (convert to ASCII and ^1 then convert to number = 4294967291) 
+
+method:
+python
+>>> p = "5385876380"
+
+>>> [ord(c) for c in p]                                                                            
+[53, 51, 56, 53, 56, 55, 54, 51, 56, 48]
+
+>>> [chr(ord(c)^1) for c in p]                                                                     
+['4', '2', '9', '4', '9', '6', '7', '2', '9', '1']      
+                                           
+>>> ''.join([chr(ord(c)^1) for c in p])                                                            
+'4294967291'
